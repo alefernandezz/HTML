@@ -1,0 +1,19 @@
+<meta charset="utf-8">
+
+<h1>PROGRAMA TABLA DE MULTIPLICAR</h1>
+
+<script>
+	
+	function saltarLinea() {
+		document.write("<br><br>");
+	}
+	function imprimir(frase) {
+		document.write(frase);
+		saltarLinea();
+	}
+	num = parseInt(prompt("Ingrese el numero para obtener su tabla de multiplicar"));
+	for (var multiplicador = 1; multiplicador <= 10; multiplicador ++) {
+		imprimir(num * multiplicador);
+	}
+
+</script>

@@ -1,0 +1,26 @@
+<meta charset="utf-8">
+
+<h1>PROGRAMA EDAD MEDIA DE FAMILIA</h1>
+
+<script>
+	
+	function saltarLinea() {
+		document.write("<br><br>");
+	}
+	function imprimir(frase) {
+		document.write(frase);
+		saltarLinea();
+	}
+
+	miembros_familia = parseInt(prompt("Ingrese la cantidad de miembros de su familia"));
+	edad = 0;
+	contador = 1;
+	while (contador <= miembros_familia ) {
+		for (var miembro = 1; miembro <= miembros_familia; miembro++) {
+			edad = edad + parseInt(prompt("Ingrese la edad del familiar " + miembro));
+			contador++;
+		}
+	}
+	imprimir("La media de las edades es " + Math.round((edad / miembros_familia)));
+
+</script>

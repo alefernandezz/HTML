@@ -1,0 +1,45 @@
+<meta charset="utf-8">
+
+<script>
+	
+	function saltarLinea() {
+		document.write("<br>");
+		document.write("<br>");
+		document.write("<br>");
+	}
+	function imprimir(frase) {
+		document.write(frase);
+		saltarLinea();
+	}
+	function sorteo(n) {
+		n = Math.round(Math.random()*n);
+		return (n);
+	}
+
+	var numeroxadivinar = sorteo(10);
+	var intentos = 3;
+	var contador = 1;
+
+	while (contador <= intentos) {
+
+		numero_usuario = parseInt(prompt("Ingrese un numero de 0 a 10"));
+
+		if (numeroxadivinar == numero_usuario) {
+			alert("Felicidades, usted acertó.");
+			break;
+		}
+		else {
+			alert("Incorrecto");
+		}
+		contador++;
+	}
+	if (numeroxadivinar == numero_usuario) {
+		imprimir("Felicidades, usted acertó.");
+	}
+	else {
+		imprimir("Incorrecto, el numero era " + numeroxadivinar);
+	}
+	imprimir("Fin");
+	
+
+</script>
